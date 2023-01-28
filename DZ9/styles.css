@@ -176,6 +176,7 @@ h1 {
 }
 
 .text_vertical {
+    color: var(--firstcolor);
     transform: rotate(-90deg);
     padding-top: 47px;
     margin-top: 40px;
@@ -189,6 +190,10 @@ h1 {
     line-height: 20px;
     color: var(--firstcolor);
 
+}
+.text_vertical>a:hover,
+.text_vertical_m>a:hover {
+    text-decoration: underline;
 }
 
 .text_vertical>a:first-child,
