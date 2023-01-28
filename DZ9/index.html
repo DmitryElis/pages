@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Denis Novik</title>
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".menu_mobile").addEventListener("click", function () {
+                document.querySelector(".m_menu").classList.add("m_menu_visible");
+            });
+            document.body.addEventListener("click", function (e) {
+                if (!e.target.closest(".menu_mobile")) {
+                    document.querySelector(".m_menu").classList.remove("m_menu_visible");
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container" id="Home">
+        <div class="m_menu">
+            <nav class="navigate_m">
+                <ul>
+                    <li><a href="Index.html#Home">Home</a></li>
+                    <li><a href="Index.html#Forme">About me</a></li>
+                    <li><a href="Index.html#Skill">Skills</a></li>
+                    <li><a href="Index.html#Portfol">Portfolio</a></li>
+                    <li><a href="Index.html#Contact">Contacts</a></li>
+
+                </ul>
+                <a href="Index.html">&#10006;</a>
+            </nav>
+            <div class="text_vertical_m">
+                <a href="#">RU</a> | <a href="#">ENG</a>
+            </div>
+        </div>
+        <div class="menu_mobile">
+            <button>
+                <img src="img/Menu_mobile.png" width="33" height="19.20">
+            </button>
+        </div>
+        <div class="menu_desktop">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Forme">About me</a></li>
+                    <li><a href="#Skill">Skills</a></li>
+                    <li><a href="#Portfol">Portfolio</a></li>
+                    <li><a href="#Contact">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="border"></div>
+        </div>
+        <div class="header">
+            <div class="preview">
+                <h1>Denis Novik</h1>
+                <p>UX | UI designer<br>
+                    24 years old, Minsk</p>
+                <div class="text_vertical">
+                    <a href="#">RU</a> | <a href="#">ENG</a>
+                </div>
+            </div>
+            <img id="avatar_desk" src="img/avatar.jpg" width="943.61" height="387" alt="&#9785;">
+            <div id="avatar_m">
+                <img src="img/avatar_mobile.jpg" width="316.5" height="478">
+            </div>
+        </div>
+        <div class="info" id="Forme">
+            <h2> About me</h2>
+            <p>Hi, I'm Denis – UX/UI designer from Minsk.<br>
+                I'm interested in design and everything connected with it.</p>
+            <br>
+            <p>I'm studying at courses "Web and mobile design<br>
+                interfaces" in IT-Academy.</p>
+            <br>
+            <p>Ready to implement excellent projects<br>
+                with wonderful people.</p>
+        </div>
+        <div class="skills" id="Skill">
+            <h2>Skills</h2>
+            <p>I work in such programs as</p>
+            <div class="apps">
+                <div class="skill_app">
+                    <img src="img/photosh_logo.png" width="89.07" height="88.41" alt="Photoshop">
+                    <p>Adobe<br>Photoshop</p>
+                    <span class="stars">
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        <span class="star_off"> &#9733;</span>
+                    </span>
+                </div>
+                <div class="skill_app">
+                    <img src="img/illustr_logo.png" width="89.07" height="88.41" alt="Illustrator">
+                    <p>Adobe<br>Illustrator</p>
+                    <span class="stars">
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        <span class="star_off">&#9733; &#9733;</span>
+                    </span>
+                </div>
+                <div class="skill_app">
+                    <img src="img/afterEff_logo.png" width="89.07" height="88.41" alt="AfterEffects">
+                    <p>Adobe<br>After Effects</p>
+                    <span class="stars">
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        <span class="star_off">&#9733; </span>
+                    </span>
+                </div>
+                <div class="figma_app">
+                    <img src="img/figma_logo.png" width="58.25" height="88.41" alt="">
+                    <p>Figma<br></p>
+                    <span class="stars">
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        <span class="star_off"> &#9733;</span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="portfolio" id="Portfol">
+            <h2>Portfolio</h2>
+            <img src="img/levis.jpg" width="936.24" height="510" alt="&#9785;">
+            <p><a href="#">Online fashion store - Homepage</a></p>
+            <img src="img/reebok.jpg" width="936.24" height="522" alt="&#9785;">
+            <p><a href="#">Reebok Store - Concept</a></p>
+            <img src="img/braun.jpg" width="936.24" height="522" alt="&#9785;">
+            <p><a href="#">Braun Landing Page - Concept</a></p>
+        </div>
+        <div class="contacts" id="Contact">
+            <h2>Contacts</h2>
+            <p>Want to know more or just chat?<br>
+                You are welcome!</p>
+            <button>Send message</button>
+            <div class="icons">
+                <a href="https://ru.linkedin.com/" target="_blank"><img src="img/in.png" width="40px" height="40px"
+                        alt="&#9785;"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="img/insta.png" width="40px" height="40px"
+                        alt="&#9785;"></a>
+                <a href="https://www.behance.net/" target="_blank"><img src="img/be.png" width="40px" height="40px"
+                        alt="&#9785;"></a>
+                <a href="https://dribbble.com/" target="_blank"><img src="img/ball.png" width="40px" height="40px"
+                        alt="&#9785;"></a>
+            </div>
+            <p class="P_S">Like me on<br>
+                <a href="https://ru.linkedin.com/" target="_blank">LinkedIn</a>,
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>,
+                <a href="https://www.behance.net/" target="_blank">Behance</a>,
+                <a href="https://dribbble.com/" target="_blank">Dribble</a>
+            </p>
+        </div>
+        <a id="Pss"
+            href='https://www.figma.com/file/5D9pDuLtS042hzaoN69Kd7/Free--Landing--Page-Template?node-id=254%3A516&t=xiiC0l0H7DlG7Brr-0'>Page
+            template by Denis Novik (c)</a>
+    </div>
+</body>
+
+</html>
