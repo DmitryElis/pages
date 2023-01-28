@@ -6,24 +6,82 @@ body {
     padding: 0px;
     box-sizing: border-box;
     text-align: center;
+    background: var(--backgroundcolor);
     --textsize: 18px;
     --textcolor: #828282;
     --firstcolor: #070707;
+    --backgroundcolor: #ffffff;
+    --backntdcolor: #F6F6F6;
+    --svgcolor: #070707;
     --weight: 600;
-    --line:22px;
+    --line: 22px;
+}
+[dark] {
+    --textcolor: #dcdcdc;
+    --firstcolor: #ffffff;
+    --backgroundcolor: #2c2c2c;
+    --backntdcolor: #070707;
+    --svgcolor: #ffffff;
+}
+
+.styled_checkbox {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.styled_checkbox input {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+}
+
+.styled_checkbox {
+    background-color: var(--textcolor);
+    border: 2px solid var(--textcolor);
+    border-radius: 20px;
+    width: 40px;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+.styled_checkbox:hover {
+    background-color: var(--firstcolor);
+    border-color: var(--firstcolor);
+}
+
+.styled_checkbox_button {
+    position: absolute;
+    transition: all 300ms;
+    left: 0;
+    transform: translateX(0);
+    background: var(--backgroundcolor);
+    border-radius: 20px;
+    height: 100%;
+    width: 20px;
+}
+
+.styled_checkbox input:checked+.styled_checkbox_button {
+    left: 100%;
+    transform: translateX(-100%);
 }
 
 .menu_mobile {
     display: none;
 }
+
 .menu_mobile button {
     border: none;
     background-color: transparent;
     margin-right: 30px;
 }
+
 .menu_mobile button:hover {
     opacity: 0.8;
 }
+
 #avatar_m {
     display: none;
 }
@@ -44,10 +102,11 @@ body {
     position: sticky;
     top: 0;
     z-index: 60;
-    background: #ffffff;
+    background: var(--backgroundcolor);
     opacity: 0.9;
 
 }
+
 .navigation ul {
     display: flex;
     list-style: none;
@@ -96,6 +155,7 @@ body {
 }
 
 h1 {
+    color: var(--firstcolor);
     font-family: 'Roboto', sans-serif;
     font-size: 47px;
     line-height: 59px;
@@ -157,7 +217,7 @@ h1 {
 .info,
 .info_m,
 .portfolio {
-    background: #F6F6F6;
+    background: var(--backntdcolor);
 }
 
 .info {
@@ -172,12 +232,14 @@ h1 {
 }
 
 h2 {
+    color: var(--firstcolor);
     font-family: 'Roboto', sans-serif;
     font-size: 34px;
     line-height: 42px;
 }
 
 .info p {
+    color: var(--firstcolor);
     font-size: var(--textsize);
     line-height: var(--line);
 }
@@ -193,11 +255,13 @@ h2 {
 }
 
 .skills_m p {
+    color: var(--firstcolor);
     margin-top: 50px;
     margin-bottom: 0px;
 }
 
 .skills p {
+    color: var(--firstcolor);
     margin-top: 69px;
 }
 
@@ -228,7 +292,7 @@ h2 {
 }
 
 .skill_app img {
-    background: var(--firstcolor);
+    background: black;
 }
 
 .star_off {
@@ -236,6 +300,7 @@ h2 {
 }
 
 .stars {
+    color: var(--firstcolor);
     font-size: 26px;
     margin: 0px;
 }
@@ -265,8 +330,9 @@ h2 {
     padding-top: 113px;
     padding-bottom: 96px;
 }
-.portfolio>img:hover{
-    box-shadow: #000000 3px 3px 10px;
+
+.portfolio a>img:hover {
+    box-shadow: var(--firstcolor) 3px 3px 10px;
     transition: all 300ms ease;
 }
 
@@ -282,6 +348,7 @@ h2 {
 .portfolio a {
     color: var(--firstcolor);
 }
+
 .portfolio a:hover {
     color: red;
 }
@@ -293,6 +360,7 @@ h2 {
 
 
 .contacts p {
+    color: var(--firstcolor);
     font-size: var(--textsize);
     line-height: var(--line);
     margin-top: 20px;
@@ -308,7 +376,7 @@ h2 {
     font-weight: var(--weight);
     font-size: var(--textsize);
     line-height: var(--line);
-    color: #FFFFFF;
+    color: var(--backgroundcolor);
 
 }
 
@@ -317,7 +385,7 @@ h2 {
 }
 
 .contacts button:active {
-    background: #FFFFFF;
+    background: var(--backgroundcolor);
     color: var(--firstcolor);
     border: solid var(--firstcolor) 1px;
 }
@@ -344,24 +412,24 @@ h2 {
     opacity: 0.1;
 }
 
-.P_S {
+.p_s {
     font-size: 14px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 17px;
-    color: var(--textcolor);
+    color: var(--textcolor) !important;
 }
 
-.P_S>a {
+.p_s>a {
     text-decoration: none;
     color: var(--textcolor);
 }
 
-.P_S>a:hover {
+.p_s>a:hover {
     opacity: 0.5;
 }
 
-.P_S>a:active {
-    color: #000000;
+.p_s>a:active {
+    color: var(--firstcolor);
 }
 
 .name_navigate {
@@ -413,20 +481,22 @@ h2 {
     display: flex;
     flex-direction: column;
 }
+
 .m_menu {
-    max-width: 375px;
-    position:relative;
-    top: 85px;
+    width: 375px;
+    position: fixed;
     right: 30px;
+    top: 70px;
     font-family: 'Roboto', sans-serif;
     padding: 0px 0px 57px 26px;
-    margin:0px;
+    margin: 0px;
     box-sizing: border-box;
     display: none;
     z-index: 3;
     box-sizing: border-box;
-    background: #FFFFFF;
+    background: var(--backgroundcolor);
 }
+
 .m_menu_visible {
     display: block;
 }
@@ -434,12 +504,13 @@ h2 {
 .navigate_m {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .navigate_m ul {
     list-style: none;
     text-align: left;
-    margin: 0px 0px 0px 20px;
+    margin: 0px 0px 0px 10px;
     padding: 0px;
 
 }
@@ -460,7 +531,7 @@ h2 {
 }
 
 .navigate_m a:hover {
-    color: #090909;
+    color: var(--firstcolor);
 }
 
 .navigate_m a:active {
@@ -476,22 +547,30 @@ h2 {
     color: var(--textcolor);
     transform: rotate(90deg)
 }
+
 .text_vertical_m>a {
     color: var(--firstcolor);
 
 }
+
 .text_vertical_m>a:hover {
     text-decoration: underline;
     transition: all 200ms ease;
 }
 
 
-#Pss {
+#pss {
     font-weight: 100;
     text-decoration: none;
     text-align: right;
-    color: #82828280;
+    color: var(--textcolor);
     padding: 20px 10px;
+}
+
+#color_svg {
+    fill: var(--firstcolor);
+    stroke: var(--firstcolor);
+
 }
 
 @media (min-width: 768px) and (max-width: 960px) {
@@ -545,7 +624,7 @@ h2 {
     .contacts>button {
         width: 316px;
         height: 55px;
-        background: #000000;
+        background: var(--firstcolor);
     }
 
     .header {
@@ -560,6 +639,10 @@ h2 {
     .skills {
         padding-top: 70px;
         padding-bottom: 98px;
+    }
+    .figma_app,
+    .skill_app {
+        padding: 40px;
     }
 
     .portfolio {
@@ -580,9 +663,20 @@ h2 {
         height: 176px;
     }
 
-    .P_S {
+    .p_s {
         font-size: 18px;
         line-height: 22px;
     }
 
+}
+@media (max-width: 414px) {
+    .text_vertical_m {
+            position: relative;
+            bottom: 259px;
+    }
+    .m_menu {
+        position: fixed;
+        right: 28px;
+    }
+    
 }

@@ -1,6 +1,6 @@
 # Portfolio page / Figma maket #
 
-UX|UI designer page / autobiography
+UX|UI designer page / autobiography (added dark theme)
 
 [Github pages](https://dmitryelis.github.io/pages/DZ9/index.html)
 
