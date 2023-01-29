@@ -1,6 +1,6 @@
 # Noiceland / Figma maket #
 
-News and release photograph page
+News and release photograph page / responsive version
 
 [Github pages](https://dmitryelis.github.io/pages/DZ11_Noiseland/index.html)
 
