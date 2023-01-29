@@ -663,7 +663,7 @@ h2 {
         text-align: center;
     }
 
-    .portfolio>img {
+    .portfolio a>img {
         width: 316px;
         height: 176px;
     }
@@ -682,6 +682,9 @@ h2 {
     .m_menu {
         position: fixed;
         right: 28px;
+    }
+    .navigate_m li {
+        margin-bottom: 35px;
     }
     
 }
